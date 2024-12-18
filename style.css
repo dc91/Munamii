@@ -1,0 +1,342 @@
+
+/* Set Full-Height Layout */
+html, body {
+    height: 100%;
+    color: #666666;
+    font-family: "Delius Swash Caps", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+h1 {
+    font-weight: bold;
+}
+
+/* ----------Split Container---------- */
+.split-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* ----------Left Section---------- */
+.left {
+    position: relative;
+    flex: 1;
+}
+.left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.products-left {
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* ----------Nav---------- */
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: #666633; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+nav ul {
+    display: flex; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    margin: 0 30px; 
+}
+nav ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+nav ul li a.active {
+    color: #fff;
+    background: #6a4b2e;
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+
+
+/* ----------Right Section---------- */
+.right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; 
+    justify-content: flex-start; 
+    align-items: center;
+    text-align: center;
+    padding-top: 150px;
+}
+.right h1 {
+    font-size: 3rem;
+    color: #6a4b2e;
+}
+.right h1:first-of-type {
+    margin-top: -50px;
+}
+.right p {
+    font-size: 1.8rem;
+    color: #555;
+    max-width: 40vw;
+}
+
+.logo img {
+    width: 40vw;
+    height: auto;
+    max-width: 700px;
+    max-height: 60vh;
+    padding-top: 50px;
+}
+
+#FrontParagraph {
+    margin: 30px 0;
+    max-width: 40vw;
+}
+#AboutParagraph {
+    padding: 0 50px;
+    margin-top: 150px;
+    max-width: 800px;
+}
+#ContactParagraph {
+    margin-top: 150px;
+}
+
+
+/* ----------Footer Social Links---------- */
+.social-links {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 50%;
+    height: 100px;
+    background: #99cccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+.social-links a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 0 15px;
+}
+.social-links a p {
+    color: #fff;
+}
+.social-links a p:hover {
+    color: #6a4b2e;
+}
+.social-links img {
+    width: 25px;
+}
+
+
+/* ----------Product Right side---------- */
+.prodChoiceImg {
+    width: 40vw; 
+    max-width: 500px;
+    height: 30vh; 
+    margin: 20px auto; 
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+}
+.prodChoiceImg img {
+    position: absolute;
+    top: -200px;
+    left: -150px;
+    transform: scale(0.3); 
+    transform-origin: top left;
+}
+.ProductTitle {
+    font-size: 2.5rem;
+    color: #6a4b2e;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/* ----------Product Left Section---------- */
+.product-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    margin-top: 120px; 
+    overflow-y: auto;
+    height: calc(100vh - 120px);
+}
+.product-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: box-shadow 0.3s ease;
+    max-height: 450px;
+}
+.product-card img {
+    max-width: 100%; 
+    object-fit: cover;
+    height: 250px;
+    border-radius: 8px;
+}
+.product-card h2 {
+    font-size: 1.1rem;
+    color: #6a4b2e;
+    margin: 10px 0;
+    font-weight: bold;
+}
+.product-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+.product-card button {
+    background-color: #6a4b2e;
+    color: #fff;
+    border: none;
+    padding: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.product-card button:hover {
+    background-color: #4e3821;
+}
+.product-card:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ----------Product Category Selection---------- */
+
+/* By default show cupcakes, hide cakes */
+.cupcakes-grid {
+    display: grid; /* Visible by default */
+}
+.cakes-grid {
+    display: none; /* Hidden by default */
+}
+
+/* When toggle-cakes is checked, hide cupcakes and show cakes */
+#toggle-cakes:checked ~ .left .cupcakes-grid {
+    display: none;
+}
+#toggle-cakes:checked ~ .left .cakes-grid {
+    display: grid;
+}
+
+/* When toggle-cupcakes is checked, show cupcakes and hide cakes */
+#toggle-cupcakes:checked ~ .left .cupcakes-grid {
+    display: grid;
+}
+#toggle-cupcakes:checked ~ .left .cakes-grid {
+    display: none;
+}
+
+
+/* ----------Contact Form---------- */
+.contact-form {
+    padding: 20px;
+    margin: 300px auto;
+    background: rgba(255,255,255,0.9);
+    max-width: 500px;
+}
+.contact-form h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #6a4b2e;
+}
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.form-group label {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #555;
+}
+.form-group input, .form-group textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-group textarea {
+    resize: vertical;
+}
+.contact-form button {
+    background-color: #6a4b2e;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.contact-form button:hover {
+    background-color: #4e3821;
+}
+.leftContact {
+    background: url('img/cake8.jpg')
+}
+
+
+/* ----------Email Subscribe---------- */
+.email-subscribe-form {
+    position: absolute;
+    bottom: 50px; 
+    left: 50%;
+    transform: translateX(-50%); 
+    display: flex;
+    gap: 10px;
+    background: rgba(255,255,255,0.8);
+    padding: 15px 20px; 
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.email-subscribe-form input[type="email"] {
+    padding: 10px;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+}
+.email-subscribe-form button {
+    background-color: #6a4b2e;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.email-subscribe-form button:hover {
+    background-color: #4e3821;
+}
+

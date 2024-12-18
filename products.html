@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Munamii Cakery</title>
+    <link rel="stylesheet" href="reset.css"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="split-container">
+        <!-- Hidden radio buttons controlling which products are shown -->
+        <input type="radio" name="product-type" id="toggle-cupcakes" checked hidden>
+        <input type="radio" name="product-type" id="toggle-cakes" hidden>
+
+        <!-- Left Side (Products) -->
+        <div class="left products-left">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Cupcakes Grid -->
+            <div class="product-grid cupcakes-grid">
+                <div class="product-card">
+                    <img src="img/cup3.jpg" alt="Vanilla">
+                    <h2>Vanilla</h2>
+                    <p>$3.00</p>
+                    <button>Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="img/cup4.jpg" alt="Chocolate & Chips">
+                    <h2>Chocolate & Chips</h2>
+                    <p>$3.50</p>
+                    <button>Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="img/cup5.jpg" alt="Chocolate & Frosting">
+                    <h2>Chocolate & Frosting</h2>
+                    <p>$3.20</p>
+                    <button>Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="img/cup6.jpg" alt="Chocolate & Nutella">
+                    <h2>Chocolate & Nutella</h2>
+                    <p>$3.80</p>
+                    <button>Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="img/cup10.jpg" alt="Toffee">
+                    <h2>Toffee</h2>
+                    <p>$4.20</p>
+                    <button>Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="img/cup7.jpg" alt="Dark Chocolate">
+                    <h2>Dark Chocolate</h2>
+                    <p>$2.90</p>
+                    <button>Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="img/cup8.jpg" alt="Lemon">
+                    <h2>Lemon</h2>
+                    <p>$2.50</p>
+                    <button>Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="img/cup9.jpg" alt="Coffee">
+                    <h2>Coffee</h2>
+                    <p>$3.20</p>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+
+            <!-- Cakes Grid -->
+            <div class="product-grid cakes-grid">
+                <div class="product-card">
+                    <img src="img/cake.jpg" alt="Chocolate">
+                    <h2>Chocolate</h2>
+                    <p>$20.00</p>
+                    <button>Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="img/cake20.png" alt="Cookie Monster">
+                    <h2>Cookie Monster</h2>
+                    <p>$25.00</p>
+                    <button>Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="img/cake21.jpg" alt="Ericka">
+                    <h2>Ericka</h2>
+                    <p>$22.00</p>
+                    <button>Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="img/cake22.jpg" alt="Belén">
+                    <h2>Belén</h2>
+                    <p>$30.00</p>
+                    <button>Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="img/cake23.png" alt="Gabriela">
+                    <h2>Gabriela</h2>
+                    <p>$29.00</p>
+                    <button>Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="img/cake24.png" alt="Jack">
+                    <h2>Jack</h2>
+                    <p>$35.00</p>
+                    <button>Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="img/cake25.png" alt="Kitty Cat">
+                    <h2>Kitty Cat</h2>
+                    <p>$25.00</p>
+                    <button>Buy Now</button>
+                </div>
+                <div class="product-card">
+                    <img src="img/cake26.png" alt="Verónica">
+                    <h2>Verónica</h2>
+                    <p>$28.00</p>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side (Toggle Controls) -->
+        <div class="right rightProducts">
+            <h1 class="ProductTitle">
+                <label for="toggle-cupcakes" style="cursor: pointer;">Cupcakes</label>
+            </h1>
+            <div class="prodChoiceImg">
+                <label for="toggle-cupcakes" style="display: block; cursor: pointer;">
+                    <img src="img/cup1.jpg" alt="cupcake">
+                </label>
+            </div>
+
+            <h1 class="ProductTitle">
+                <label for="toggle-cakes" style="cursor: pointer;">Wedding Cakes</label>
+            </h1>
+            <div class="prodChoiceImg">
+                <label for="toggle-cakes" style="display: block; cursor: pointer;">
+                    <img src="img/cake2.jpg" alt="cake">
+                </label>
+            </div>
+
+            <div class="social-links">
+                <a href="https://www.instagram.com/munamii.cakery/" target="_blank">
+                    <img src="img/Instagram_icon.svg" alt="Munamii Cakery Logo">
+                    <p>@munamii.cakery</p>
+                </a>
+                
+                <a href="https://www.facebook.com/munamiicupcakes/" target="_blank">
+                    <img src="img/Facebook_icon.svg" alt="Munamii Cakery Logo">
+                    <p>munamiicupcakes</p>
+                </a>
+                <a href="mailto:contact@munamii.com">
+                    <img src="img/email.svg" alt="Munamii Cakery Logo">
+                    <p>email</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

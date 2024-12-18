@@ -1,0 +1,139 @@
+@media (max-width: 1400px), (max-height: 1000px) {
+    /* Main change, stack right on left */
+    .split-container {
+        flex-direction: column;
+        height: auto;
+        overflow: auto;
+    }
+    .left, .right {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+    .right {
+        order: 1;
+        padding-top: 50px;
+    }
+    .left {
+        order: 2;
+    }
+    .left img, .logo img {
+        max-height: 800px;
+    }
+
+
+    /* ----------Adjust text---------- */
+    .right h1 {
+        font-size: 2rem; 
+        padding-top: 120px;
+    }
+    .right p {
+        font-size: 1.2rem;
+        max-width: 90vw; 
+    }
+    #AboutParagraph {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    #ContactParagraph {
+        margin-top: 100px;
+        margin-bottom: 150px;
+    }
+
+
+    /* ----------Adjust nav and footer---------- */
+    nav ul li {
+        margin: 0 10px;
+        z-index: 1;
+    }
+    nav {
+        position: fixed;
+        background: #666633; /* Transparent background */
+    }
+    .social-links {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: rgb(153, 204, 204);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+        z-index: 999;
+    }
+
+
+    /* ----------Adjust About---------- */
+    .rightAbout {
+        position: absolute;
+    }
+    #AboutImg {
+        background: #fff;
+        margin-top: 120px;
+    }
+    #AboutImg h1{
+        padding-top: 0;
+    }
+    .leftAbout img {
+        display: none;
+    }
+
+
+    /* ----------Adjust Products Right side (Categories)---------- */
+    .rightProducts {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 150px;
+    }
+    .rightProducts h1{
+        padding: 0;
+        margin: 0;
+    }
+    .right h1:first-of-type {
+        margin-top: 0;
+    }
+    .prodChoiceImg {
+        flex: 0 0 50%;
+        box-sizing: border-box;
+        text-align: center;
+        margin-bottom: 20px; /* optional spacing */
+    }
+    .prodChoiceImg img {
+        display: none;
+    }
+
+
+    /* ----------Adjust Products Left side (Products)----------*/
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding-bottom: 120px;
+    }
+    .cupcakes-grid {
+        margin-top: 0;
+    }
+    .product-card img {
+        object-fit: contain;
+    }
+
+
+    /* ----------Adjust Contact and Subscribe Field---------- */
+    .contact-form {
+        margin: 50px auto 150px auto;
+    }
+    .email-subscribe-form {
+        margin-bottom: 100px;
+    }
+    .social-links a p {
+        font-size: 1rem;
+    }
+    
+}
+
+/* ----------Adjust for smallest screens---------- */
+@media (max-width: 700px) {
+    .product-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
